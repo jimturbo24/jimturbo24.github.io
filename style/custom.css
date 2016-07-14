@@ -6,8 +6,8 @@
   margin-top: 60px;
   margin-bottom: 60px
 }
-.row-top-offset-60{
-  margin-top: 60px;
+.row-top-offset-30{
+  margin-top: 30px;
 }
 img {
     max-width: 50%;
@@ -23,4 +23,24 @@ legend {
 .center-pills {
     display: flex;
     justify-content: center;
+}
+.well-sm {
+    border-radius: 10px;
+}
+p {
+    margin: 0px 20px 10.5px;
+}
+h4 {
+    margin: 10.5px 15px 10.5px;
+}
+.progress {
+    background-color: #2b3e50;
+    margin: 0px 15px 20px;
+}
+.progress-bar-info {
+    background-color: #df691a;
+}
+.btn {
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
