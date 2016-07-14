@@ -20,3 +20,7 @@ legend {
     margin-bottom: 14px;
     border-bottom: 5px solid #df691a;
 }
+.center-pills {
+    display: flex;
+    justify-content: center;
+}
