@@ -26,14 +26,10 @@ legend {
 }
 .well-sm {
     border-radius: 10px;
-}
-
-h4 {
-    margin: 10.5px 15px 10.5px;
+    padding: 5px 25px 10px;
 }
 .progress {
     background-color: #2b3e50;
-    margin: 0px 15px 20px;
 }
 .progress-bar-info {
     background-color: #df691a;
