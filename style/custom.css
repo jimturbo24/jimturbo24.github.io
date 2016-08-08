@@ -14,7 +14,7 @@ img {
     height: auto;
 }
 .img-rounded {
-    border-radius: 50px;
+    border-radius: 10px;
 }
 legend {
     margin-bottom: 14px;
