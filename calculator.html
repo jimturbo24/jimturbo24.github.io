@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border-radius: 7px;
+      font-family: 'Orbitron', sans-serif;
+      -webkit-appearance: none;
+    }
+    hr {
+      height: 2px;
+      background-color: grey;
+      margin-bottom: 25px;
+    }
+    .container {
+      width: 300px;
+      padding: 1px;
+      margin: 0px auto;
+      border-width: 2px;
+      border-style: solid;
+      border-color: grey;
+      background-color: #2c5aa0;
+    }
+    .display {
+      height: 37px;
+      padding: 15px 5px 7px 5px;
+      margin: 35px 25px 35px 25px;
+      font-size: 235%;
+      text-align: right;
+      overflow: hidden;
+      background-color: #e8e8e8;
+      border-width: 6px;
+      border-style: inset;
+      border-color: buttonface;
+    }
+    .button {
+      width: 21%;
+      padding: 2% 0px;
+      margin: 2% 2%;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: #87aade;
+      box-sizing: border-box;
+    }
+    .float-left {
+      float: left;
+    }
+    .clear {
+      clear: both;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        width: auto;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <form class="container">
+      <h3 class="display"></h3>
+      <hr>
+      <button type="button" class="button float-left" id="7">7</button>
+      <button type="button" class="button float-left" id="8">8</button>
+      <button type="button" class="button float-left" id="9">9</button>
+      <button type="button" class="button float-left" id="/">/</button>
+      <button type="button" class="button float-left" id="4">4</button>
+      <button type="button" class="button float-left" id="5">5</button>
+      <button type="button" class="button float-left" id="6">6</button>
+      <button type="button" class="button float-left" id="*">*</button>
+      <button type="button" class="button float-left" id="1">1</button>
+      <button type="button" class="button float-left" id="2">2</button>
+      <button type="button" class="button float-left" id="3">3</button>
+      <button type="button" class="button float-left" id="-">-</button>
+      <button type="button" class="button float-left" id="C">C</button>
+      <button type="button" class="button float-left" id="0">0</button>
+      <button type="button" class="button float-left" id="eq">=</button>
+      <button type="button" class="button float-left" id="+">+</button>
+      <button type="button" class="button float-left" id="(">(</button>
+      <button type="button" class="button float-left" id=")">)</button>
+      <button type="button" class="button float-left" id=".">.</button>
+      <button type="button" class="button float-left" id="%">%</button>
+      <div class="clear"></div>
+    </form>
+    <script type="text/javascript">
+      var display = document.querySelector(".display");
+      var btnList = document.querySelectorAll("button");
+      var numList = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
+      var opList = ["+", "-", "*", "/", "%"]
+      var lastId = "";
+      var math = "";
+      var dsplyNum = ""
+
+      for(var i = 0; i < (btnList.length); i++){
+        btnList[i].addEventListener("click", function(event) {
+          var btnId = event.currentTarget.id;
+          var isNum = numList.includes(btnId);
+          var lastIsOp = opList.includes(lastId);
+
+          if (lastId === "eq" && isNum) {
+            display.textContent = "";
+            math = ""
+            lastId = btnId
+          }
+          if (lastIsOp) {
+            display.textContent = "";
+            lastId = btnId
+          }
+          if (btnId === "C") {
+            display.textContent = "";
+            math = ""
+          }
+          else if (btnId === "eq") {
+            var ans = eval(math)
+            display.textContent = ans;
+            math = ans
+            console.log(ans.toString().length);
+            lastId = btnId
+          }
+          else {
+            if (isNum) {
+              display.textContent += btnId;
+               dsplyNum += btnId
+              console.log(dsplyNum.length);
+            }
+            math += btnId;
+            lastId = btnId
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+ <!-- || !(lastId.match(/[0-9]/i)) -->
