@@ -1,16 +1,8 @@
 header
   height: 450px
-  background: url(/assets/img/hero-bg.jpg) center center
-  background-size: cover
-
-
-  .logo
-    +size(50px)
-    float: left
-    margin: 10px 0 0 30px
-
-    path
-      fill: rgba(0, 0, 0, 0.4)
+  background-image: url(/assets/img/#{$logo}), url(/assets/img/#{$hero})
+  @extend %bg-img
+  background-position: 30px 20px, 50% 50%
 
   nav
     float: right

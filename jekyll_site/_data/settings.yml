@@ -4,12 +4,39 @@
 
 title: Artists Theme
 description: Thinker // Designer // YouTuber
+
 email: devtipsfordesigners@gmail.com
 
-# NOTE: The Logo and Background image are defined in the all.sass document.
-
 menu:
-- {name: About Me, url: '#about-me'}
+- {name: About Me, url: '#about'}
 - {name: Work, url: '#work'}
 - {name: Clients, url: '#clients'}
 - {name: Contact, url: '#contact'}
+
+#-------------------------------
+# About Section
+
+about_text: <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+skills:
+- {name: Communucation, value: '1'}
+- {name: Organization, value: '2'}
+- {name: Learning, value: '3'}
+- {name: Teaching, value: '4'}
+- {name: Planning, value: '5'}
+- {name: Visual Design, value: '6'}
+- {name: UX Design, value: '7'}
+- {name: Programming, value: '8'}
+
+#-------------------------------
+# Work Section
+
+projects:
+- {name: Project A, folder: proj-1}
+- {name: Project B, folder: proj-2}
+- {name: Project C, folder: proj-3}
+- {name: Project D, folder: proj-4}
+- {name: Project E, folder: proj-5}
+- {name: Project F, folder: proj-6}
+- {name: Project G, folder: proj-7}
+- {name: Project H, folder: proj-8}

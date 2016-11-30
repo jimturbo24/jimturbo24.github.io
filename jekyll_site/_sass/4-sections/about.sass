@@ -1,19 +1,14 @@
-h3
-  @extend %small-bold
-  color: $accent-light
-  padding: 100px 0 30px
-
 .face-lockup
   max-width: 780px
   +display(flex)
   margin: 0 auto
   +align-items(center)
-  +justify-content(space-around)
+  +justify-content(space-between)
 
   .face-img
+    background-image: url(/assets/img/#{$avatar})
     +size(200px)
     border-radius: 50%
-    background-image: url(/assets/img/turbo_profile_web_2.jpg)
     order: 3
 
   [class^="icon"]
