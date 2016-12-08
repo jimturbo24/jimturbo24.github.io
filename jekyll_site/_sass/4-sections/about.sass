@@ -6,6 +6,8 @@
   +justify-content(space-between)
 
   .face-img
+    background-size: cover
+    background-position: center
     background-image: url(/assets/img/#{$avatar})
     +size(200px)
     border-radius: 50%
@@ -39,8 +41,7 @@
       display: block
       background-position: center center
       background-repeat: no-repeat
-      width: auto
-      margin-bottom: 30px
+      margin: 0 auto 30px
 
     [class^="icon"]
       margin: 10px
